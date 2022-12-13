@@ -1,15 +1,15 @@
 import './App.css';
 import React, { useState } from 'react';
 
-import About from './components/About';
+// import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+// import {
+//   BrowserRouter as Router,
+//   Route,
+//   Routes,
+// } from "react-router-dom";
 
 
 function App() {
@@ -40,18 +40,18 @@ function App() {
   }
   return (
     <>
-      <Router>
+      {/* <Router> */}
         <Navbar title="TextUtils" mode={mode} toggleMode={toggleMode} />
         <Alert alert={alert} />
         <div className="container my-3">
-        <Routes>
-            <Route exact path="/about" element={<About mode={mode} />}>
-            </Route>
-            <Route exact path="/" element={<TextForm heading="Try TextUtils - word counter, character counter, remove extra spaces"  mode={mode} showAlert={showAlert} />}>
-            </Route>
-          </Routes>
+        {/* <Routes> */}
+            {/* <Route exact path="/about" element={<About mode={mode} />}>
+            </Route> */}
+            <TextForm heading="Try TextUtils - word counter, character counter, remove extra spaces"  mode={mode}/>
+            {/* </Route>
+          </Routes> */}
         </div>
-      </Router>
+      {/* </Router> */}
 
     </>
 
